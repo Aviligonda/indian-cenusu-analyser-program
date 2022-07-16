@@ -29,4 +29,13 @@ public class CensusAnalyserTest {
 
         }
     }
+
+    @Test
+    public void givenCsvFileIsCorrectBut_TypeIncorrect_ShouldReturnCustomException() throws IOException {
+        try {
+            censusAnalyser.loadingTheDataFromCsvFile("src/files/censusWrongDataType.csv");
+        }catch (CensusIOExceptions e){
+            e.printStackTrace();
+        }
+    }
 }
