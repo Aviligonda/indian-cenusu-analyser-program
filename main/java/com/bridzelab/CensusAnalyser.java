@@ -28,9 +28,9 @@ public class CensusAnalyser {
             }
             csvReader.close();
         } catch (FileNotFoundException e) {
-            throw new CensusIOExceptions(CensusIOExceptions.exceptionType.NO_SUCH_FILE + "File is not found ");
+            throw new CensusIOExceptions(CensusIOExceptions.exceptionType.NO_SUCH_FILE + " --> File is not found ");
         } catch (NumberFormatException e) {
-            throw new CensusIOExceptions(CensusIOExceptions.exceptionType.INCORRECT_TYPE + "It is not a valid type");
+            throw new CensusIOExceptions(CensusIOExceptions.exceptionType.INCORRECT_TYPE + "-->It is not a valid type");
         }
 
     }

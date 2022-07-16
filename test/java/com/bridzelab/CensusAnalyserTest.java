@@ -19,4 +19,14 @@ public class CensusAnalyserTest {
         censusAnalyser.loadingTheDataFromCsvFile("src/files/censusData.csv");
         Assert.assertEquals(true, censusAnalyser.checkNumberOfRecords());
     }
+
+    @Test
+    public void givenCsvFileIncorrect_ShouldReturnCustomException() throws IOException {
+        try {
+            censusAnalyser.loadingTheDataFromCsvFile("src/files/stateCensusData.csv");
+        } catch (CensusIOExceptions e) {
+            e.printStackTrace();
+
+        }
+    }
 }
