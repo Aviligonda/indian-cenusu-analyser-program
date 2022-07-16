@@ -16,11 +16,11 @@ public class CensusAnalyser {
             CSVReader csvReader = new CSVReader(new FileReader(filePath));
             String[] data = csvReader.readNext();
             if (!checkHeader(data)) {
-                throw new CensusIOExceptions(CensusIOExceptions.exceptionType.INVALID_HEADER + "Header is not correct..");
+                throw new CensusIOExceptions(CensusIOExceptions.exceptionType.INVALID_HEADER + "-->Header is not correct..");
             }
             while ((data = csvReader.readNext()) != null) {
                 if (data.length != 4) {
-                    throw new CensusIOExceptions(CensusIOExceptions.exceptionType.DELIMITER_ISSUE + "The file having issue with Delimiter");
+                    throw new CensusIOExceptions(CensusIOExceptions.exceptionType.DELIMITER_ISSUE + "-->The file having issue with Delimiter");
                 } else {
                     csvData.add(new CensusCSVData(Integer.parseInt(data[0]), data[1],
                             Integer.parseInt(data[2]), data[3]));
