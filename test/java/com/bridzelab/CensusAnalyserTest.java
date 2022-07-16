@@ -10,14 +10,14 @@ public class CensusAnalyserTest {
     CensusAnalyser censusAnalyser;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp()   {
         censusAnalyser = new CensusAnalyser();
     }
 
     @Test
     public void givenCsvFileNumberOfRecordsMatchesShouldReturnTrue() throws IOException, CensusIOExceptions {
         censusAnalyser.loadingTheDataFromCsvFile("src/files/censusData.csv");
-        Assert.assertEquals(true, censusAnalyser.checkNumberOfRecords());
+        Assert.assertTrue(censusAnalyser.checkNumberOfRecords());
     }
 
     @Test

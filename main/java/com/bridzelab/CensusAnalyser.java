@@ -36,19 +36,12 @@ public class CensusAnalyser {
     }
 
     public boolean checkNumberOfRecords() {
-        if (csvData.size() == 37) {
-            return true;
-        } else {
-            return false;
-        }
+        return csvData.size() == 37;
     }
 
     public boolean checkHeader(String[] data) {
-        if (data[0].compareTo("SrNo") + data[1].compareTo("StateName") +
-                data[2].compareTo("TIN") + data[3].compareTo("StateCode") == 0)
-            return true;
-        else
-            return false;
+        return data[0].compareTo("SrNo") + data[1].compareTo("StateName") +
+                data[2].compareTo("TIN") + data[3].compareTo("StateCode") == 0;
 
     }
 }

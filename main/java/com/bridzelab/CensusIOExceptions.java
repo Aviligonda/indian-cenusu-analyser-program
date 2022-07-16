@@ -9,6 +9,6 @@ public class CensusIOExceptions extends Exception {
         NO_SUCH_FILE,
         INCORRECT_TYPE,
         DELIMITER_ISSUE,
-        INVALID_HEADER;
+        INVALID_HEADER
     }
 }
