@@ -43,7 +43,16 @@ public class CensusAnalyserTest {
     public void givenCsvFileIsCorrectBut_DelimiterIsInCorrect_ShouldReturnCustomException() throws IOException {
         try {
             censusAnalyser.loadingTheDataFromCsvFile("src/files/censusDelimeter.csv");
-        }catch (CensusIOExceptions e){
+        } catch (CensusIOExceptions e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void givenCsvFileIsCorrectBut_HeaderIsInCorrect_ShouldReturnCustomException() throws IOException {
+        try {
+            censusAnalyser.loadingTheDataFromCsvFile("src/files/censusWrongHeaader.csv");
+        } catch (CensusIOExceptions e) {
             e.printStackTrace();
         }
     }
